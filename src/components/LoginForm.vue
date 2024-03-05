@@ -1,20 +1,26 @@
 
 <template>
-    <div class="position-absolute top-100 start-50 translate-middle">
+    <!-- <div class="position-absolute top-100 start-50 translate-middle"> -->
 
         <div class="card">
             <div class="card-body">
 
                 <div v-if="error" class="alert alert-danger" role="alert">
-                 <p>{{ errorMessage }}</p>
-                 <button v-on:click="closeAlert" type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+                    <div class="d-flex flex-row bd-highlight gap-3 justify-content-center align-items-center">
+                        <div>
+                            <p>{{ errorMessage }}</p>
+                        </div>
+
+                        <div> 
+                            <button v-on:click="closeAlert" type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+                        </div>
+                    </div>
                 </div>
         
                 <form>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input v-model="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -26,7 +32,7 @@
             </div>
         </div>
 
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -46,10 +52,6 @@
             email: function(val) {
                 console.log(val);
             }
-        },
-        mounted() {
-            console.log('login:');
-            login()
         },
         methods: {
             closeAlert() {
@@ -81,7 +83,14 @@
 </script>
 
 <style scoped>
-    .container{
-        background-color: rgb(0, 225, 255);
+    .card{
+        width: 25%;
+        height:30%;
+         border: 1px solid transparent; /* Set the border to be transparent */
+
+    }
+
+    .d-flex flex-row bd-highlight mb-3 {
+        gap: 10px;
     }
 </style>

@@ -2,7 +2,7 @@
     <div>
         <nav id="navbar" class="navbar navbar-light">
           <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Hello</span>
+            <span class="navbar-brand mb-0 h1">Hello {{ loggedIn }} </span>
           </div>
         </nav>
     </div>
@@ -12,6 +12,17 @@
 
     export default {
         name: "NavbarComponent",
+        props: {
+            loggedIn:String
+        },
+        created() {
+            console.log('ww',this.loggedIn);
+        },
+        watch: {
+            loggedIn(val) {
+                console.log(val);
+            }
+        }
     }
 </script>
 

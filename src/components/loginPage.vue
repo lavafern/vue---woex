@@ -1,11 +1,10 @@
 <template>
-    <div>
+    <div id="bod">
         <NavbarComponent></NavbarComponent>
-        <div class="container position-absolute top-50 start-50 translate-middle">
-            <loginForm></loginForm>
-        </div>  
+        <div id="ww" class="d-flex bd-highlight mb-3 justify-content-center  align-items-center">
+                <loginForm></loginForm>
+        </div>
         <FooterComponent></FooterComponent>
-
     </div>
 </template>
 
@@ -26,7 +25,20 @@
 </script>
 
 <style>
-    .container {
-        background-color: aqua;
+
+    #ww {
+        margin-top: 20px;
+        flex:1;
     }
+
+    .d-flex {
+        height: 100%;
+    }
+
+    #bod {
+        min-height: 100vh; margin:0;
+        display:flex; 
+        flex-direction:column; 
+    }
+
 </style>
