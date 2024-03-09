@@ -86,7 +86,7 @@
     .card{
         width: 25%;
         height:30%;
-         border: 1px solid transparent; /* Set the border to be transparent */
+        border: 1px solid transparent; /* Set the border to be transparent */
 
     }
 
